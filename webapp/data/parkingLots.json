@@ -1,0 +1,58 @@
+[
+
+    {
+        "id": 1,
+        "location": {
+            "longitude": 21.0,
+            "latitude": 52.15
+        },
+        "address": "Krakow",
+        "pricing": "100$/h",
+        "security": "no security",
+        "restrictions": "no restrictions",
+        "additionalInformation": "no additional info",
+        "googleStreetViewLink": "example google link",
+        "parkingCapacity": {
+            "FOR_MOTORCYCLE": 20,
+            "UNIVERSAL": 100,
+            "FOR_BIKE": 5
+        }
+    },
+    {
+        "id": 2,
+        "location": {
+            "longitude": 10.45,
+            "latitude": 59.55
+        },
+        "address": "Oslo",
+        "pricing": "100$/h",
+        "security": "no security",
+        "restrictions": "no restrictions",
+        "additionalInformation": "no additional info",
+        "googleStreetViewLink": "example google link",
+        "parkingCapacity": {
+            "FOR_MOTORCYCLE": 20,
+            "UNIVERSAL": 100,
+            "FOR_BIKE": 5
+        }
+    },
+    {
+        "id": 3,
+        "location": {
+            "longitude": -3.70379,
+            "latitude": 40.41
+        },
+        "address": "Madrid",
+        "pricing": "100$/h",
+        "security": "no security",
+        "restrictions": "no restrictions",
+        "additionalInformation": "no additional info",
+        "googleStreetViewLink": "example google link",
+        "parkingCapacity": {
+            "FOR_MOTORCYCLE": 20,
+            "UNIVERSAL": 100,
+            "FOR_BIKE": 5
+        }
+    }
+
+]
