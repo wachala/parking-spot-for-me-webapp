@@ -25,8 +25,8 @@ controller("map-controller", ["$scope", "$http", function($scope, $http) {
             }
         }
     });
-    // http://localhost:5555/parking-lot-service/api/parking-lot/
-    $http.get('data/parkingLots.json').then(function(success) {
+    // data/parkingLots.json
+    $http.get('http://' + location.hostname + ':8765/zuul-service/parking-lot-service/api/parking-lot/').then(function(success) {
         $scope.parkingLots = success.data;
         angular.forEach($scope.parkingLots, function(parkingLot) {               
             marker = {

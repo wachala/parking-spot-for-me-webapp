@@ -1,0 +1,36 @@
+sudo: required
+
+cache:
+  directories:
+  - .autoconf
+  - $HOME/.m2
+
+services:
+  - docker
+
+branches:
+  only:
+    - master
+
+notifications:
+  email: false
+  slack:
+    secure: Fk81p+KkCUzbSM62lUNeMzfQlGaHYtz5AXTkpmkdpFkHE26Z0IV4VvPl8USgdkrsHpupAZawhWcDyzExjOnxL45nWkUWoAzklpSLaxhmUglWaA7KtA2Z50cduS+Kf94j4ULTkfUux2Gpl5zPmt54yzU/6J2jk4TyiE1M6XnGiCmA3/j8fu3ocu8j3vFWLuYSOioNkPXZXYvTe7v5WjPlJLhQ//nIuLDcxEUl7iDnOB5pxUPiSEwWa++02RmYkSyPnAbh31GNChc/ZRvfRlDCfP9iUoicM01F/AAtdOAofIta/rMavgj9bi+pa+3Hblu9brFfEGOmTEwnKiNPOhW6fFXAdX/Bobc+bSgP31R+R2x5qWo0N9ALLvqws8tF6TO66G37s5qY/ANBmXbrUuzZSrOTx+LPgtleSZRA6a8hQo6ShtvfHGmyQX/Iiqfib3RvQ8b3DELuWKUc2GX3pOrMbuyAmwsTzlnypr2wL1qiNOMsG+8TyRVdgywA7a1Luh4AaULSqpaMYvKWQSpn2Xg+VTyWKf4c27CfXHmYhgXzRYs2hWl/mMF7YDStnHGJx5R+Hx8y5m5IulBeoWtZt59Fcrp6NejHX4lNR/9cR88gJSJ5gVwZO3QBu30XvDurl7QrzCLgwdK456nscflftC6j3WwgiEB2/Hj5PK2jo/d+Lps=
+
+before_install:
+  - docker build -t builder_image -f docker/Dockerfile.buidler .
+  - docker run -it --rm -v $(pwd):/microservice -v $HOME/.m2:/root/.m2 builder_image
+  - docker build -t dist_image -f docker/Dockerfile.dist .
+  - docker build -t test_image -f docker/Dockerfile.test .
+
+script:
+  - docker run -it -v $HOME/.m2:/root/.m2 --name test test_image
+  - docker run -d --name dist dist_image
+  - docker ps | grep -q dist
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+    docker tag dist_image patrykks/iosr-parking-spot-webapp;
+    docker push patrykks/iosr-parking-spot-webapp;
+    fi
