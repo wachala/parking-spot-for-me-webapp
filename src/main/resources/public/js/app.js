@@ -49,7 +49,7 @@ controller("map-controller", ["$scope", "$http", function($scope, $http) {
 }]);
 
 function buildParkLotDescription(parkingLot) {
-    description = '';
+    var description = '';
 
     description += 'address: ' + parkingLot['address'] + '<br>';
     description += 'pricing: ' + parkingLot['pricing'] + '<br>';
@@ -57,7 +57,26 @@ function buildParkLotDescription(parkingLot) {
     description += 'restrictions: ' + parkingLot['restrictions'] + '<br>';
     description += 'additionalInformation: ' + parkingLot['additionalInformation'] + '<br>';
     description += 'googleStreetViewLink: ' + parkingLot['googleStreetViewLink'] + '<br>';
-    description += 'parkingCapacity: ' + JSON.stringify(parkingLot['parkingCapacity'], null, 2) + '<br>';
+
+    description += buildParkingCapacityDescription(parkingLot['parkingCapacity'], parkingLot['parkingSpotsOccupied']);
 
     return description;
+}
+
+function buildParkingCapacityDescription(parkingCapacity, spotsOccupied) {
+    var capacityDescription = "TYPE\tAVAILABLE\tFREE";
+
+    for (var key in parkingCapacity) {
+        if (parkingCapacity.hasOwnProperty(key)) {
+            if(parkingCapacity[key] > 0 && spotsOccupied[key]) {
+                var available = parkingCapacity[key];
+                var occupied = spotsOccupied[key];
+                var free = available - occupied;
+
+                capacityDescription += '<br>' + key + "\t" + available + "\t" + free;
+            }
+        }
+    }
+
+    return capacityDescription;
 }
