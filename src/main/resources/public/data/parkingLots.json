@@ -1,58 +1,214 @@
 [
-
     {
         "id": 1,
         "location": {
-            "longitude": 21.0,
-            "latitude": 52.15
+            "longitude": 19.924081,
+            "latitude": 50.063939
         },
-        "address": "Krakow",
-        "pricing": "100$/h",
-        "security": "no security",
-        "restrictions": "no restrictions",
-        "additionalInformation": "no additional info",
-        "googleStreetViewLink": "example google link",
+        "address": " aleja Adama Mickiewicza 18, 33-332 Kraków",
+        "pricing": "$$",
+        "security": "Yes",
+        "restrictions": "No gas",
+        "additionalInformation": "Parking przy Muzeum",
+        "googleStreetViewLink": "http://sample-link.com",
         "parkingCapacity": {
-            "FOR_MOTORCYCLE": 20,
-            "UNIVERSAL": 100,
+            "FOR_DISABLED": 4,
+            "UNIVERSAL": 30,
+            "FOR_MOTORCYCLE": 5,
             "FOR_BIKE": 5
+        },
+        "parkingSpotsOccupied": {
+            "FOR_DISABLED": 2,
+            "UNIVERSAL": 20,
+            "FOR_MOTORCYCLE": 4,
+            "FOR_BIKE": 1
         }
     },
     {
         "id": 2,
         "location": {
-            "longitude": 10.45,
-            "latitude": 59.55
+            "longitude": 19.925727,
+            "latitude": 50.06551
         },
-        "address": "Oslo",
-        "pricing": "100$/h",
-        "security": "no security",
-        "restrictions": "no restrictions",
-        "additionalInformation": "no additional info",
-        "googleStreetViewLink": "example google link",
+        "address": "Czarnowiejska 4, 33-332 Kraków",
+        "pricing": "$$",
+        "security": "Yes",
+        "restrictions": "No restrictions",
+        "additionalInformation": "Parking Strzeżony Satis Plus 24h",
+        "googleStreetViewLink": "http://sample-link.com",
         "parkingCapacity": {
-            "FOR_MOTORCYCLE": 20,
-            "UNIVERSAL": 100,
+            "FOR_DISABLED": 4,
+            "UNIVERSAL": 40,
+            "FOR_TRUCK": 2,
+            "FOR_MOTORCYCLE": 5,
             "FOR_BIKE": 5
+        },
+        "parkingSpotsOccupied": {
+            "FOR_DISABLED": 3,
+            "UNIVERSAL": 30,
+            "FOR_TRUCK": 1,
+            "FOR_MOTORCYCLE": 2,
+            "FOR_BIKE": 0
         }
     },
     {
         "id": 3,
         "location": {
-            "longitude": -3.70379,
-            "latitude": 40.41
+            "longitude": 19.932195,
+            "latitude": 50.055565
         },
-        "address": "Madrid",
-        "pricing": "100$/h",
-        "security": "no security",
-        "restrictions": "no restrictions",
-        "additionalInformation": "no additional info",
-        "googleStreetViewLink": "example google link",
+        "address": "plac Na Groblach 24, 33-332 Kraków",
+        "pricing": "$$$",
+        "security": "Yes",
+        "restrictions": "No restrictions",
+        "additionalInformation": "Parking Wawel",
+        "googleStreetViewLink": "http://sample-link.com",
         "parkingCapacity": {
-            "FOR_MOTORCYCLE": 20,
-            "UNIVERSAL": 100,
+            "FOR_DISABLED": 4,
+            "UNIVERSAL": 35,
+            "FOR_MOTORCYCLE": 5,
+            "FOR_BUS": 10,
+            "FOR_BIKE": 5,
+            "FOR_CAR": 30
+        },
+        "parkingSpotsOccupied": {
+            "FOR_DISABLED": 0,
+            "UNIVERSAL": 24,
+            "FOR_MOTORCYCLE": 0,
+            "FOR_BUS": 3,
+            "FOR_BIKE": 3,
+            "FOR_CAR": 15
+        }
+    },
+    {
+        "id": 4,
+        "location": {
+            "longitude": 19.949048,
+            "latitude": 50.051276
+        },
+        "address": "Dajwór 17, 31-000 Kraków",
+        "pricing": "$$$",
+        "security": "No",
+        "restrictions": "No restrictions",
+        "additionalInformation": "GWŻ - Parking",
+        "googleStreetViewLink": "http://sample-link.com",
+        "parkingCapacity": {
+            "FOR_DISABLED": 4,
+            "UNIVERSAL": 50,
+            "FOR_MOTORCYCLE": 5,
+            "FOR_BIKE": 5,
+            "FOR_CAR": 20
+        },
+        "parkingSpotsOccupied": {
+            "FOR_DISABLED": 1,
+            "UNIVERSAL": 27,
+            "FOR_MOTORCYCLE": 0,
+            "FOR_BIKE": 2,
+            "FOR_CAR": 10
+        }
+    },
+    {
+        "id": 5,
+        "location": {
+            "longitude": 19.888258,
+            "latitude": 50.078759
+        },
+        "address": "Armii Krajowej 85, 30-962 Kraków",
+        "pricing": "$",
+        "security": "Yes",
+        "restrictions": "No gas",
+        "additionalInformation": "Jano. Parking strzeżony",
+        "googleStreetViewLink": "http://sample-link.com",
+        "parkingCapacity": {
+            "FOR_DISABLED": 4,
+            "UNIVERSAL": 40,
+            "FOR_MOTORCYCLE": 5,
             "FOR_BIKE": 5
+        },
+        "parkingSpotsOccupied": {
+            "FOR_DISABLED": 2,
+            "UNIVERSAL": 31,
+            "FOR_MOTORCYCLE": 0,
+            "FOR_BIKE": 1
+        }
+    },
+    {
+        "id": 6,
+        "location": {
+            "longitude": 19.946804,
+            "latitude": 50.042572
+        },
+        "address": "Jana Zamoyskiego 22, 33-332 Kraków",
+        "pricing": "$",
+        "security": "No",
+        "restrictions": "No restrictions",
+        "additionalInformation": "Parking Stare Podgórze",
+        "googleStreetViewLink": "http://sample-link.com",
+        "parkingCapacity": {
+            "FOR_DISABLED": 4,
+            "UNIVERSAL": 35,
+            "FOR_MOTORCYCLE": 5,
+            "FOR_BIKE": 5
+        },
+        "parkingSpotsOccupied": {
+            "FOR_DISABLED": 3,
+            "UNIVERSAL": 23,
+            "FOR_MOTORCYCLE": 1,
+            "FOR_BIKE": 1
+        }
+    },
+    {
+        "id": 7,
+        "location": {
+            "longitude": 20.918889,
+            "latitude": 52.175313
+        },
+        "address": "Szyszkowa 45, 02-285 Warszawa",
+        "pricing": "$$",
+        "security": "Yes",
+        "restrictions": "No restrictions",
+        "additionalInformation": "Parking Okęcie Szyszkowa 45",
+        "googleStreetViewLink": "http://sample-link.com",
+        "parkingCapacity": {
+            "FOR_DISABLED": 8,
+            "UNIVERSAL": 80,
+            "FOR_TRUCK": 20,
+            "FOR_MOTORCYCLE": 5,
+            "FOR_BIKE": 5
+        },
+        "parkingSpotsOccupied": {
+            "FOR_DISABLED": 4,
+            "UNIVERSAL": 67,
+            "FOR_TRUCK": 15,
+            "FOR_MOTORCYCLE": 1,
+            "FOR_BIKE": 4
+        }
+    },
+    {
+        "id": 8,
+        "location": {
+            "longitude": 20.956054,
+            "latitude": 52.184877
+        },
+        "address": "Skrzydlata 1, 02-176 Warszawa",
+        "pricing": "$$$",
+        "security": "Yes",
+        "restrictions": "No restrictions",
+        "additionalInformation": "Lider Parking Okęcie",
+        "googleStreetViewLink": "http://sample-link.com",
+        "parkingCapacity": {
+            "FOR_DISABLED": 10,
+            "UNIVERSAL": 100,
+            "FOR_TRUCK": 20,
+            "FOR_MOTORCYCLE": 5,
+            "FOR_BIKE": 5
+        },
+        "parkingSpotsOccupied": {
+            "FOR_DISABLED": 5,
+            "UNIVERSAL": 89,
+            "FOR_TRUCK": 14,
+            "FOR_MOTORCYCLE": 3,
+            "FOR_BIKE": 3
         }
     }
-
 ]
