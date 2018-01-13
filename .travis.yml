@@ -1,10 +1,5 @@
 sudo: required
 
-cache:
-  directories:
-  - .autoconf
-  - $HOME/.m2
-
 services:
   - docker
 
@@ -18,8 +13,7 @@ notifications:
     secure: pQMzdTLNEBzW3nrIf/GUfIhqPZrAKLMC0q02poz09zw9GLmYdea0K3xc22EBcGVtC+a7mKa1l6b9IvmDhbQwRGKSH+KRUOwK8cdIugiFghIJ4HV66ZZIjtVuTXfECXH3UNUHIZxr1NrbSHGKyRhFxbyJqiVZnMOkGemqgPJvK8YLTqK0XSB7MkFLnsmP2TC9wVfgishclieAyPWbP52aiiNzlIedjKTmkWCkt3u30LR5OOH/SbLdmMpK28jndEB2bUEFRHPVTsxuNw3LSVxUuvJ1xk7AKMHGNrWzYLpYY85LfQJa7Jjak/QS0GkoRRGyRA3P49SgPSEqfEyVHCMDHJjkGCrS3YkoRmQE3/1aVM+1/ta7c6g/c9DyxQeBombSYGtOLUgQWnALQnocHSwZiEwGeLJ+v+j0T6MS+ydWL1gMBCJPsap0w2OB95dsyN3XILmsMkHGf51DdODWqCbommUoxduR/X8XyySAX9NoaXxsdoAVZqK5KfHmK/4MZniiihxn0uYLIkhEG/YzCfXEapBpj6bomxgcrzmS3wO+u9iyVGzYCSY9HqhVbS0slCL656eY7ddWuSS24fM4OgsEwaJxIKYXUUNflB/WD9fSInOKfCWCDSdNlEY5Kbn9soKNecQMV4YysJy35UrBH+fpeSOa8y/1C7jbpUic9gi3VK8=
 
 before_install:
-  - docker build -t builder_image -f docker/Dockerfile.buidler .
-  - docker run -it --rm -v $(pwd):/microservice -v $HOME/.m2:/root/.m2 builder_image
+  - mvn clean package
   - docker build -t dist_image -f docker/Dockerfile.dist .
   - docker build -t test_image -f docker/Dockerfile.test .
 
